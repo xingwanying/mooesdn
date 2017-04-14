@@ -43,3 +43,8 @@ Vue.http.interceptors.push((request, next) => {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+window.ElementUI = require('element-ui');
+require('element-ui/lib/theme-default/index.css');
+
+//quee
+window.Q = require('./Qunee/qunee-module');

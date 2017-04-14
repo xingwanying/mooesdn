@@ -12,5 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/qunee', function () {
+     $json = '{"nodes":[{"name": "VM1", "x": -100, "y": -50, "id": 1}, {"name": "VM2", "id": 2}], "edges": [{"name": "", "from":1, "to":2}]}';
+        $data = json_decode($json, true);
+        return $json;
+});
+
+
