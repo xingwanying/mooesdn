@@ -23,6 +23,7 @@ function translateToQuneeElements(json, graph){
     if(json.nodes){
         Q.forEach(json.nodes, function(data){
             let node = graph.createNode(data.name, data.x || 0, data.y || 0);
+            node.image = 'Q-server';
             node.set("data", data);
             map[data.id] = node;
         });
